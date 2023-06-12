@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+body{
+    background-image: linear-gradient(130deg, #191919 10%, #191919 100%);
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform:  translate(-50%,50%);
+}
+
+.card {
+    position: relative;
+    width: 17rem;
+    height: 23rem;
+    background-color:#243447;
+    color: white;
+    border-radius: 1rem;
+    border: .1rem solid transparent;
+    overflow: hidden;
+    box-shadow: 0 .2rem .6rem #0003;
+    transition: .5s ease-in-out;
+}
+.card:hover {
+    border: .1rem solid #15a496;
+    transform: scale(1.05);
+}
+
+.card::before {
+    position: absolute;
+    content: "";
+    background-color:#15a496;
+    border-radius: 0 0 90px 150px;
+    transition: .5s ease-in-out;
+    z-index: 100;
+}
+
+.card::before {
+    top: -10%;
+    right: -9%;
+    width: 15rem;
+    height: 10rem;
+}
+
+
+.card:hover::before {
+    transform: scale(3.0);
+}
+
+
+
+.card-content {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 200;
+}
+
+.card-img, 
+.card-title {
+    transform: translateY(4rem);
+    transition: .5s ease-in-out;
+
+}
+
+.card-img {
+    width: auto;
+    height: 10.9rem;
+}
+
+.card-title {
+    font-size: 1rem;
+    text-transform: capitalize;
+    transition-delay: .1s;
+    text-align: right;
+}
+.card_des{
+    font-size: 12px;
+    font-weight: 400;
+    color: #333;
+    text-align: center;
+    text-transform: capitalize;
+    transition-delay: .1s;
+    margin-top: 50px;
+
+}
+
+.card-body, 
+.card-footer {
+    transform: translateY(8rem);
+    transition: .5s ease-in-out;
+}
+
+.card-body {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition-delay: .2s;
+}
+
+
+.card:hover .card-img,
+.card:hover .card-title,
+.card:hover .card-body,
+.card:hover .card-footer {
+    transform: translateY(0);
+}
+
+.card-footer {
+    transition-delay: .3s;
+}
+
+.star {
+    font-size: 1.4rem;
+    color: gold;
+}
+
+.card-price {
+    font: bolder 1.5rem sans-serif;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    background-color: unset;
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    margin-bottom: 7px;
+    color:white;
+    cursor: pointer;
+     background-color: #15a496;
+}
+
